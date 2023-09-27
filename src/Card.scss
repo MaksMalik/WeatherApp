@@ -1,0 +1,133 @@
+.card {
+  min-height: 500px;
+  aspect-ratio: 0.8;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-direction: column;
+  font-family: 'Anton', sans-serif;
+
+
+  .form {
+    transition-duration: 300ms;
+    border-radius: 10px;
+
+
+    input {
+      background-color: rgba(255, 255, 255, 0.308);
+      border: none;
+      border-right: none;
+      padding: 10px;
+      border-radius: 10px 0 0 10px;
+      color: rgba(0, 0, 0, 0.76);
+    }
+
+    ::placeholder {
+      opacity: 0.5;
+      color: rgba(0, 0, 0, 0.685);
+    }
+
+    :focus {
+      outline: none;
+
+    }
+
+    button {
+      background-color: rgba(0, 0, 0, 0.603);
+      border: none;
+      border-left: none;
+      padding: 10px;
+      border-radius: 0 10px 10px 0;
+      cursor: pointer;
+      transition-duration: 300ms;
+      color: rgba(255, 255, 255, 0.664);
+
+
+    }
+
+    button:hover {
+      background-color: rgba(0, 0, 0, 0.349);
+      color: rgb(255, 255, 255);
+    }
+
+
+  }
+
+  .weatherData {
+    margin: 20px 0 60px 0;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    opacity: 0.7;
+
+    .weatherData_top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      opacity: 0.7;
+
+
+
+      .weatherData_top_temperatur {
+        font-size: 40px;
+      }
+
+      .weatherData_top_city {
+        font-size: 30px;
+      }
+    }
+
+    .weatherData_bottom {
+      font-weight: normal;
+
+      width: 300%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      opacity: 0.7;
+
+      .weatherData_bottom_left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .weatherData_bottom_left_image {
+          margin-bottom: 10px;
+          font-size: 40px;
+        }
+
+        .weatherData_bottom_left_humidity {
+          font-size: 12px;
+        }
+      }
+
+      .weatherData_bottom_right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .weatherData_bottom_right_image {
+          margin-bottom: 10px;
+          font-size: 40px;
+        }
+
+        .weatherData_bottom_right_wind {
+          font-size: 12px;
+        }
+      }
+    }
+
+
+  }
+}
