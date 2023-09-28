@@ -1,18 +1,19 @@
 .card {
-  min-height: 500px;
-  aspect-ratio: 0.8;
+  min-height: min-content;
+  padding: 40px;
+  min-width: 350px;
+  width: min-content;
   background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
   flex-direction: column;
   font-family: 'Anton', sans-serif;
+  color: white;
 
 
   .form {
-    transition-duration: 300ms;
     border-radius: 10px;
 
 
@@ -57,7 +58,7 @@
   }
 
   .weatherData {
-    margin: 20px 0 60px 0;
+    margin: 20px 0 0px 0;
     color: white;
     font-weight: bold;
     display: flex;
@@ -66,6 +67,33 @@
     align-items: center;
     gap: 40px;
     opacity: 0.7;
+    transition-duration: 1000ms;
+    animation-name: example;
+    animation-duration: 1000ms;
+    height: 300px;
+
+
+    @keyframes example {
+      from {
+        height: 0px;
+        opacity: 0;
+      }
+
+      to {
+        height: 300px;
+        opacity: 0.7;
+      }
+    }
+
+    @keyframes example2 {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 0.7;
+      }
+    }
 
     .weatherData_top {
       display: flex;
@@ -74,6 +102,8 @@
       align-items: center;
       gap: 10px;
       opacity: 0.7;
+      animation-name: example2;
+      animation-duration: 2000ms;
 
 
 
@@ -88,12 +118,14 @@
 
     .weatherData_bottom {
       font-weight: normal;
+      gap: 60px;
 
-      width: 300%;
       display: flex;
       justify-content: space-around;
       align-items: center;
       opacity: 0.7;
+      animation-name: example2;
+      animation-duration: 2000ms;
 
       .weatherData_bottom_left {
         display: flex;
@@ -130,4 +162,29 @@
 
 
   }
+}
+
+.noCard {
+  color: rgb(134, 0, 0);
+  font-weight: bold;
+  height: 0px;
+  opacity: 0.7;
+  animation-name: example3;
+  animation-duration: 1000ms;
+  position: relative;
+  top: 10px;
+  transition-duration: 1s;
+
+
+
+  @keyframes example3 {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 0.7;
+    }
+  }
+
 }
