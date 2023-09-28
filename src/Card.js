@@ -41,7 +41,7 @@ function Card() {
       </form>
 
 
-      {weather && weather?.cod=== "200" ? <div className='weatherData'>
+      {weather && weather?.cod== "200" ? <div className='weatherData'>
         <div className='weatherData_top'>
           <img src='' className='weatherData_top_image' alt='weather'></img>
           <div className='weatherData_top_temperatur'>{weather?.main?.temp + "°C"}</div>
