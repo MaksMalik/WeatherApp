@@ -13,10 +13,8 @@ function Card() {
   const getWeather = async () => {
     try {
       const responseWeather = await fetch(apiUrl)
-      console.log(responseWeather.status)
       const dataWeather = await responseWeather.json()
       setWeather(dataWeather)
-      console.log(dataWeather)
       setResponseText(dataWeather.message)
     }
     catch (e) {
