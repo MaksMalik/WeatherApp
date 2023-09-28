@@ -18,6 +18,11 @@ function Card() {
       setWeather(dataWeather)
       setResponseText(dataWeather.message)
       setLinkImage(`https://openweathermap.org/img/wn/${dataWeather.weather[0].icon}@2x.png`)
+      const linkElement = document.querySelector('link[rel=icon]');
+      linkElement.href = `https://openweathermap.org/img/wn/${dataWeather.weather[0].icon}@2x.png`;
+      console.log(linkElement?.href)
+      const titleElement = document.querySelector('title');
+      titleElement.innerText = `Weather - ${dataWeather?.name} - ${dataWeather?.main?.temp + "°C"}`
     }
     catch (e) {
       console.log(e)
@@ -25,7 +30,7 @@ function Card() {
 
   }
 
-  const checkWeather = e => {
+  const checkWeather = async e => {
     e.preventDefault()
     getWeather()
     setValueEntered("")
