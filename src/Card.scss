@@ -111,16 +111,19 @@
         opacity: 1 !important;
       }
 
-
+      .weatherData_top_weather {
+        font-size: 18px;
+        opacity: 0.5;
+      }
 
       .weatherData_top_temperatur {
         font-size: 40px;
-        opacity: 0.7;
+        opacity: 0.8;
       }
 
       .weatherData_top_city {
         font-size: 30px;
-        opacity: 0.7;
+        opacity: 0.8;
       }
     }
 
@@ -131,7 +134,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      opacity: 0.7;
+      opacity: 0.4;
       animation-name: example2;
       animation-duration: 500ms;
 
