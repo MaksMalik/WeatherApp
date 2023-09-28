@@ -66,10 +66,9 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    opacity: 0.7;
-    transition-duration: 1000ms;
+    opacity: 1;
     animation-name: example;
-    animation-duration: 1000ms;
+    animation-duration: 500ms;
     height: 300px;
 
 
@@ -77,11 +76,15 @@
       from {
         height: 0px;
         opacity: 0;
+        transform: scaleY(0);
+
       }
 
       to {
         height: 300px;
-        opacity: 0.7;
+        opacity: 1;
+        transform: scaleY(1);
+
       }
     }
 
@@ -101,18 +104,23 @@
       justify-content: center;
       align-items: center;
       gap: 10px;
-      opacity: 0.7;
       animation-name: example2;
-      animation-duration: 2000ms;
+      animation-duration: 500ms;
+
+      .weatherData_top_image {
+        opacity: 1 !important;
+      }
 
 
 
       .weatherData_top_temperatur {
         font-size: 40px;
+        opacity: 0.7;
       }
 
       .weatherData_top_city {
         font-size: 30px;
+        opacity: 0.7;
       }
     }
 
@@ -125,7 +133,7 @@
       align-items: center;
       opacity: 0.7;
       animation-name: example2;
-      animation-duration: 2000ms;
+      animation-duration: 500ms;
 
       .weatherData_bottom_left {
         display: flex;

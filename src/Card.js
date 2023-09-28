@@ -6,6 +6,7 @@ function Card() {
   const [valueEntered, setValueEntered] = useState("");
   const [weather, setWeather] = useState("");
   const [responseText, setResponseText] = useState("")
+  const [linkImage, setLinkImage] = useState("")
 
   const apiKey = "2e657ba56539e787289424207593c5f9"
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&appid=${apiKey}&q=${valueEntered}`
@@ -16,6 +17,8 @@ function Card() {
       const dataWeather = await responseWeather.json()
       setWeather(dataWeather)
       setResponseText(dataWeather.message)
+      console.log(dataWeather.weather[0].icon)
+      setLinkImage(`https://openweathermap.org/img/wn/${dataWeather.weather[0].icon}@2x.png`)
     }
     catch (e) {
       console.log(e)
@@ -41,7 +44,7 @@ function Card() {
 
       {weather && weather?.cod===200 ? <div className='weatherData'>
         <div className='weatherData_top'>
-          <img src='' className='weatherData_top_image' alt='weather'></img>
+          <img src={linkImage} className='weatherData_top_image' alt='weather'></img>
           <div className='weatherData_top_temperatur'>{weather?.main?.temp + "°C"}</div>
           <div className='weatherData_top_city'>{weather?.name}</div>
         </div>
